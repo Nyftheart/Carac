@@ -154,6 +154,16 @@ footer {
 }
 
 @media screen and (min-width: 400px){
+    .section-title {
+        font-size: 56px;
+        color: #7099AB;
+    }
+
+    .section-subtitle {
+        font-size: 44px;
+        color: #7099AB;
+        margin-top: 20px;
+    }
     body{
         font-size: 2rem;
     }
