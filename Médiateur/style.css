@@ -66,9 +66,9 @@ body{
 }
 
 .paragraph {
-    font-size: 16px;
     color: #333333;
     margin-top: 10px;
+    font-size: 19px;
 }
 
 .mediator-info {
@@ -120,7 +120,6 @@ body{
     background-color: #E9F1F4;
     color: #2d2d2d;
     font-family: -apple-system,Arial,sans-serif;
-    font-size: 1rem;
 }
 .mediator-image{
     width: 148px;
@@ -154,10 +153,24 @@ footer {
     margin: 0 5px;
 }
 
-
-@media only screen and (max-width: 768px){
-
-    body{
-        font-size: 2rem;
+@media screen and (min-width: 400px){
+    .mediator-info-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .mediator-image{
+        margin: 10px 0px;
+        width: 248px;
+        height: 350px;
+    }
+    .button-médiateur{
+        background-color: #d11313;
+        border: solid 1px #d11313;
+        color: white;
+        padding: 0.8rem 2.8rem;
+        font-size: 3.0rem;
+        transition: all 0.4s ease;
+        box-shadow: none;
     }
 }
