@@ -118,7 +118,7 @@ footer {
     margin: 0 5px;
 }
 
-@media only screen and (min-width: 900px){
+@media only screen and (min-width: 1000px){
     body{
         font-size: 1rem;
     }
@@ -166,7 +166,7 @@ footer {
 }
 
 
-@media screen and (max-width: 899px){
+@media screen and (max-width: 999px){
     .section-title {
         font-size: 56px;
         color: #7099AB;
