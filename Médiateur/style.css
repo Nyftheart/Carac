@@ -155,10 +155,10 @@ footer {
 
 @media screen and (min-width: 400px){
     body{
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     .paragraph{
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     .mediator-info-text {
         display: flex;
