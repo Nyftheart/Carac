@@ -218,7 +218,9 @@ footer {
 
     .footer-wrapper a {
         display: block;
+        text-decoration: none;
         margin-bottom: 10px;
+        color: white;
     }
 
     .footer-wrapper span {
