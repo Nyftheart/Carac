@@ -213,6 +213,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        color: white;
     }
 
     .footer-wrapper a {
