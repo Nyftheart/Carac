@@ -99,24 +99,6 @@ footer {
     background-color: #7099AB;
 }
 
-.footer-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 30px;
-    color: white;
-}
-
-.footer-wrapper a {
-    text-decoration: none;
-    color: white;
-}
-
-.footer-wrapper span {
-    margin: 0 5px;
-}
 
 @media only screen and (min-width: 1000px){
     body{
@@ -161,6 +143,25 @@ footer {
     .mediator-text {
         margin-left: 30px;
         margin-bottom: 20px;
+    }
+
+    .footer-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px;
+        color: white;
+    }
+
+    .footer-wrapper a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .footer-wrapper span {
+        margin: 0 5px;
     }
 
 }
