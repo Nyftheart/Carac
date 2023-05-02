@@ -10,6 +10,7 @@
     vertical-align: middle;
     font-family: UniversUltraCon,Arial,sans-serif;
 }
+
 .logo{
     display: flex;
 }
@@ -36,6 +37,14 @@ body{
     padding-left: 100px;
     margin-left: -50px;
 }
+
+
+.formulaire-div{
+    background-color: #E8F1F4;
+    padding: 10px 50px;
+}
+
+
 .page {
     display: flex;
     justify-content: center;
@@ -226,4 +235,8 @@ footer {
     .footer-wrapper span {
         display: none;
     }
+
+
 }
+
+
