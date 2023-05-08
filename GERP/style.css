@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -22,6 +21,9 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1; /* Assure la visibilité du menu en position fixed */
+    overflow-x: hidden;
+    transition: 0.5s; /* Ajoute une animation sur la transition de la sidebar */
 }
 
 .sidebar img {
@@ -96,18 +98,12 @@ nav ul li:hover {
 
 /* Content */
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
-}
-
 .page {
     background-color: #fff;
     margin-left: 300px;
     margin-right: 50px;
     margin-top: 20px;
+    transition: margin-left 0.5s; /* Ajoute une animation sur la transition de la page */
 }
 
 table {
@@ -139,4 +135,146 @@ p {
     height: 7px;
     width: 100%;
     background-color: #7099AB;
+}
+
+/* Burger menu */
+
+.burger-container {
+    display: none;
+}
+
+.burger {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px;
+}
+.burger-container img {
+    height: 4vh;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1000px) {
+    .sidebar {
+        width: 100%; /* Laisse toute la largeur pour le burger menu */
+        margin-top: 0; /* Supprime la marge au début de la sidebar */
+        transform: translateX(-100%); /* Cache la sidebar en dehors de l'écran */
+    }
+
+    .burger-container {
+        display: flex; /* Affiche le container pour le burger menu */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2; /* Assure la visiblité du burger menu en position fixed */
+    }
+
+    .burger {
+        position: relative;
+        transform: translate(-50%, -50%);
+        margin-top: 15px;
+    }
+
+    .page {
+        margin-top: 100px;
+        margin-left: 45px; /* Supprime la marge de gauche */
+    }
+
+    /* Affiche la sidebar quand le burger menu est ouvert */
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    /* Déplace la page quand le burger menu est ouvert */
+    .page.open {
+        margin-left: 0;
+    }
+
+
+    .burger-container {
+        position: relative;
+    }
+
+    .burger-link {
+        display: block;
+        width: 50px; /* ajuster la largeur selon votre design */
+        height: 50px; /* ajuster la hauteur selon votre design */
+    }
+
+    .burger-link img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu-list {
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .menu-list:target {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .menu-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .menu-list li {
+        margin-bottom: 1em;
+    }
+
+    .menu-list a {
+        font-size: 2em;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .menu-list a:hover {
+        color: #FFA500;
+    }
+
+    .close-link {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 2em;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .close-link:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    .close-link:hover:before {
+        background-size: 40px 40px;
+    }
+
+
 }
