@@ -32,7 +32,18 @@ body {
     padding-left: 10px;
     padding-right: 10px;
 }
-
+.newfoot{
+    display: none;
+}
+.sidebar-part footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #7099AB;
+    color: white;
+}
 nav {
     flex-grow: 1;
 }
@@ -102,6 +113,7 @@ nav ul li:hover {
     background-color: #fff;
     margin-left: 300px;
     margin-right: 50px;
+    margin-bottom: 200px;
     margin-top: 20px;
     transition: margin-left 0.5s; /* Ajoute une animation sur la transition de la page */
 }
@@ -152,6 +164,11 @@ p {
 }
 .burger-container img {
     height: 4vh;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+
 }
 
 /* Media queries */
@@ -291,6 +308,33 @@ p {
     .close-link:hover:before {
         background-size: 40px 40px;
     }
+    .sidebar-part {
+        padding-bottom: 0; /* Supprime le padding-bottom précédent */
+        flex-grow: 1; /* Ajoute flex-grow pour pousser le footer en bas de page */
+    }
+
+    .newfoot {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background-color: #7099AB;
+        color: white;
+        text-align: center;
+    }
+    .newfoot p {
+        font-size: 40px;
+
+    }
+    .newfoot a {
+        color: white;
+        text-decoration: none;
+
+    }
+
+
 
 
 }
